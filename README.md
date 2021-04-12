@@ -52,9 +52,41 @@ php artisan serve
 
 ## Información técnica 📄
 
+Este sistema se ha implementado en Laravel 8 y se ha abordado mediante la implementacion de 2 modelos, los cuales son los productos y las categorias, ambos modelos pertenecientes a la base de datos.
+
+Para estos 2 datos principales se han generado los endpoints:
+
+correspondiente a nuestras categorias.
+```
+GET->/api/categories
+```
+
+correspondiente a nuestros productos.
+```
+GET->/api/products
+```
+
+Donde podemos hacer tambien un GET de un producto o categoria puntual agregando /{id} a nuestra solicitud(siendo {id} el numero de id respectivo del producto o categoria a  consultar).
+
+En este sistema tambien se ha agregado una funcion que nos permite ordenar los productos segun distintas caracteristicas.
+
+El endpoint de esta solicitud es:
+```
+GET->/api/products/search/{numeroOrden}/{search?}
+```
+Donde {numeroOrden} puede tomar 6 valores distintos segun el orden que se desee consultar.
+
 |          Name | Required |  Type   | Description                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |     `product` | required | string  | The product for which to perform the action. <br/><br/> Supported values: `publish` or `analyze`.                                                                     |
+|     `organization_id` | optional | string  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
+                            |
+|     `organization_id` | optional | string  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
+                            |
+|     `organization_id` | optional | string  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
+                            |
+|     `organization_id` | optional | string  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
+                            |
 |     `organization_id` | optional | string  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
 
 
