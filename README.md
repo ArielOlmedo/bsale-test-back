@@ -52,23 +52,23 @@ php artisan serve
 
 ## Información técnica 📄
 
-Este sistema se ha implementado en Laravel 8 y se ha abordado mediante la implementacion de 2 modelos, los cuales son los productos y las categorias, ambos modelos pertenecientes a la base de datos.
+Este sistema se ha implementado en Laravel 8 y se ha abordado mediante la implementación de 2 modelos, los cuales son los productos y las categorías, ambos modelos pertenecientes a la base de datos.
 
 Para estos 2 datos principales se han generado los endpoints:
 
-correspondiente a nuestras categorias.
+Correspondiente a nuestras categorías.
 ```
 GET->/api/categories
 ```
 
-correspondiente a nuestros productos.
+Correspondiente a nuestros productos.
 ```
 GET->/api/products
 ```
 
-Donde podemos hacer tambien un GET de un producto o categoria puntual agregando /{id} a nuestra solicitud(siendo {id} el numero de id respectivo del producto o categoria a  consultar).
+Donde podemos hacer también un GET de un producto o categoría puntual agregando /{id} a nuestra solicitud(siendo {id} el número de id respectivo del producto o categoría a  consultar).
 
-En este sistema tambien se ha agregado una funcion que nos permite ordenar los productos segun distintas caracteristicas.
+En este sistema también se ha agregado una función que nos permite ordenar los productos según distintas características.
 
 El endpoint de esta solicitud es:
 ```
@@ -78,25 +78,25 @@ GET->/api/products/search/{numeroOrden}/{search}
 donde los parametros ingresados {numeroOrden} y {search} corresponden a:
 
 
-|          Nombre | Prioridad |  Tipo   | Descripcion                                                                                                                                                           |
+|          Nombre | Prioridad |  Tipo   | Descripción                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorias de manera ascendente <br/><br/>  1 : Ordenar por categorias de manera descendente <br/><br/>  2 : Ordenar por orden alfabetico de manera ascendente <br/><br/>  3 : Ordenar por orden alfabetico de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
+|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorías de manera ascendente <br/><br/>  1 : Ordenar por categorías de manera descendente <br/><br/>  2 : Ordenar por orden alfabético de manera ascendente <br/><br/>  3 : Ordenar por orden alfabético de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
 |`search` | Opcional | String  | Corresponde al texto a buscar entre los nombres de los productos|                                                                  |
 
 
-Finalmente se ha implementado una funcion para filtrar los productos segun la categoria a la que estos pertenezcan.
+Finalmente se ha implementado una función para filtrar los productos según la categoría a la que estos pertenezcan.
 
 El endpoint de esta solicitud es:
 ```
 GET->/api/products/search/{numeroOrden}/categories/{idCategoria}/{search}
 ```
-donde los parametros ingresados {numeroOrden} ,{idCategoria} y {search} corresponden a:
+donde los parámetros ingresados {numeroOrden} ,{idCategoria} y {search} corresponden a:
 
-|          Nombre | Prioridad |  Tipo   | Descripcion                                                                                                                                                           |
+|          Nombre | Prioridad |  Tipo   | Descripción                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorias de manera ascendente <br/><br/>  1 : Ordenar por categorias de manera descendente <br/><br/>  2 : Ordenar por orden alfabetico de manera ascendente <br/><br/>  3 : Ordenar por orden alfabetico de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
-|`idCategoria` | Opcional | int  | Corresponde al id de la categoria de los productos a buscar| 
-|`search` | Opcional | String  | Corresponde al texto a buscar entre los nombres de los productos filtrador por la categoria y/o orden anteriormente dado| |
+|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorías de manera ascendente <br/><br/>  1 : Ordenar por categorías de manera descendente <br/><br/>  2 : Ordenar por orden alfabético de manera ascendente <br/><br/>  3 : Ordenar por orden alfabético de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
+|`idCategoria` | Opcional | int  | Corresponde al id de la categoría de los productos a buscar| 
+|`search` | Opcional | String  | Corresponde al texto a buscar entre los nombres de los productos filtrados por la categoría y/o orden anteriormente referenciado| |
 
 
 ## Autor ✒️
