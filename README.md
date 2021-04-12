@@ -52,7 +52,7 @@ php artisan serve
 
 ## Información técnica 📄
 
-Este sistema se ha implementado en Laravel 8 y se ha abordado mediante la implementación de 2 modelos, los cuales son los productos y las categorías, ambos modelos pertenecientes a la base de datos.
+Este sistema se ha implementado en Laravel 8 y se ha abordado mediante la implementación de 2 modelos, los cuales son los `productos` y las `categorías`, ambos modelos presentes en la base de datos.
 
 Para estos 2 datos principales se han generado los endpoints:
 
