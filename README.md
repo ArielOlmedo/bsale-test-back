@@ -1,62 +1,111 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Test-Bsale
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+En el siguiente repositorio se presenta un sistema web planteado por la empresa Bsale, el cual busca determinar si las aptitudes del postulante son adecuadas para la oferta laboral que se está entregando. En este documento se procederá a detallar una breve explicación de como fue abordado el problema. El documento también abordara algunas características respecto a la instalacion y las herramientas utilizadas en el desarrollo.
 
-## About Laravel
+La arquitectura utilizada para la solución de este problema será un MVC (Modelo-Vista-Controlador).Para realizar el desarrollo de esta web se ha desarrollado el controlador y la vista, las cuales corresponden al BackEnd y FrontEnd respectivamente, el modelo ya viene dado en el test. Dentro de las herramientas disponibles para el desarrollo del este tipo de software se encuentran distintos frameworks para el manejo de la Api rest, pero se ha decidido utilizar laravel 8. Igualmente para las vistas se utilizó la plantilla de “HTML 5 Boilerplate” junto con la librería Bootstrap para CSS, sin ningún framework en particular.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Demo: https://arielolmedo.github.io/bsale-test/
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Repositorio Back-End del proyecto:https://github.com/ArielOlmedo/bsale-test-back
 
-## Learning Laravel
+Repositorio Front-End del proyecto:https://github.com/ArielOlmedo/bsale-test
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Comenzando 🚀
 
-## Laravel Sponsors
+Para desplegar el Back-End, se debe clonar el repositorio en caso de querer ejecutar de manera local (En caso de desear desplegar Front-end dirigirse a su documentacion [aquí.](https://github.com/ArielOlmedo/bsale-test)).
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Clonar Front-End:
+```
+$ git clone https://git.heroku.com/bsale-test-backend.git
+```
 
-### Premium Partners
+### Pre-requisitos 📋
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
+Instalar PHP 8.x: https://www.php.net/downloads
 
-## Contributing
+Instalar composer: https://getcomposer.org/
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Instalar Laravel
+```
+composer global require laravel/installer
+```
 
-## Code of Conduct
+### Instalación 🔧
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Backend:
 
-## Security Vulnerabilities
+Iniciar servidor local:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
+php artisan serve
+```
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Construido con 🛠️
+
+
+* [Laravel 8.x](https://laravel.com/)
+* [PHP](https://www.php.net/)
+* [Composer](https://getcomposer.org/)
+
+## Información técnica 📄
+
+Este sistema se ha implementado en Laravel 8 y se ha abordado mediante la implementación de 2 modelos, los cuales son los `productos` y las `categorías`, ambos modelos presentes en la base de datos.
+
+Para estos 2 datos principales se han generado los endpoints:
+
+Correspondiente a nuestras categorías.
+```
+GET->/api/categories
+```
+
+Correspondiente a nuestros productos.
+```
+GET->/api/products
+```
+
+Donde podemos hacer también un GET de un producto o categoría puntual agregando /{id} a nuestra solicitud(siendo {id} el número de id respectivo del producto o categoría a  consultar).
+
+En este sistema también se ha agregado una función que nos permite ordenar los productos según distintas características.
+
+El endpoint de esta solicitud es:
+```
+GET->/api/products/search/{numeroOrden}/{search}
+```
+
+donde los parametros ingresados {numeroOrden} y {search} corresponden a:
+
+
+|          Nombre | Prioridad |  Tipo   | Descripción                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorías <br/><br/>  2 : Ordenar por orden alfabético de manera ascendente <br/><br/>  3 : Ordenar por orden alfabético de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
+|`search` | Opcional | String  | Corresponde al texto a buscar entre los nombres de los productos|                                                                  |
+
+
+Finalmente se ha implementado una función para filtrar los productos según la categoría a la que estos pertenezcan.
+
+El endpoint de esta solicitud es:
+```
+GET->/api/products/search/{numeroOrden}/categories/{idCategoria}/{search}
+```
+donde los parámetros ingresados {numeroOrden} ,{idCategoria} y {search} corresponden a:
+
+|          Nombre | Prioridad |  Tipo   | Descripción                                                                                                                                                           |
+| -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorías <br/><br/>  2 : Ordenar por orden alfabético de manera ascendente <br/><br/>  3 : Ordenar por orden alfabético de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
+|`idCategoria` | Opcional | int  | Corresponde al id de la categoría de los productos a buscar| 
+|`search` | Opcional | String  | Corresponde al texto a buscar entre los nombres de los productos filtrados por la categoría y/o orden anteriormente referenciado| |
+
+
+## Autor ✒️
+
+* **Ariel Olmedo** - [ArielOlmedo](https://github.com/ArielOlmedo)
+
+
+## Licencia 📄
+
+Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+
+---
