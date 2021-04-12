@@ -80,7 +80,7 @@ donde los parametros ingresados {numeroOrden} y {search} corresponden a:
 
 |          Nombre | Prioridad |  Tipo   | Descripción                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorías de manera ascendente <br/><br/>  1 : Ordenar por categorías de manera descendente <br/><br/>  2 : Ordenar por orden alfabético de manera ascendente <br/><br/>  3 : Ordenar por orden alfabético de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
+|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorías <br/><br/>  2 : Ordenar por orden alfabético de manera ascendente <br/><br/>  3 : Ordenar por orden alfabético de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
 |`search` | Opcional | String  | Corresponde al texto a buscar entre los nombres de los productos|                                                                  |
 
 
@@ -94,7 +94,7 @@ donde los parámetros ingresados {numeroOrden} ,{idCategoria} y {search} corresp
 
 |          Nombre | Prioridad |  Tipo   | Descripción                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorías de manera ascendente <br/><br/>  1 : Ordenar por categorías de manera descendente <br/><br/>  2 : Ordenar por orden alfabético de manera ascendente <br/><br/>  3 : Ordenar por orden alfabético de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
+|`numeroOrden` | Obligatorio | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>  0 : Ordenar por categorías <br/><br/>  2 : Ordenar por orden alfabético de manera ascendente <br/><br/>  3 : Ordenar por orden alfabético de manera descendente <br/><br/>  4 : Ordenar por precio de manera ascendente <br/><br/>  5 : Ordenar por precio de manera descendente|
 |`idCategoria` | Opcional | int  | Corresponde al id de la categoría de los productos a buscar| 
 |`search` | Opcional | String  | Corresponde al texto a buscar entre los nombres de los productos filtrados por la categoría y/o orden anteriormente referenciado| |
 
