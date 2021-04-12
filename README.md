@@ -16,9 +16,9 @@ Repositorio Front-End del proyecto:https://github.com/ArielOlmedo/bsale-test
 
 Para desplegar el Back-End, se debe clonar el repositorio en caso de querer ejecutar de manera local (En caso de desear desplegar Front-end dirigirse a su documentacion [aquí.](https://github.com/ArielOlmedo/bsale-test)).
 
-Clonar Front-End:
+Clonar Back-End:
 ```
-$ git clone https://git.heroku.com/bsale-test-backend.git
+$ git clone https://github.com/ArielOlmedo/bsale-test-back.git
 ```
 
 ### Pre-requisitos 📋
