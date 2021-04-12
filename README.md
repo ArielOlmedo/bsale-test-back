@@ -72,8 +72,10 @@ En este sistema tambien se ha agregado una funcion que nos permite ordenar los p
 
 El endpoint de esta solicitud es:
 ```
-GET->/api/products/search/{numeroOrden}/{search?}
+GET->/api/products/search/{numeroOrden}/{search}
 ```
+
+donde los parametros ingresados {numeroOrden} y {search} corresponden a:
 
 
 |          Nombre | Prioridad |  Tipo   | Descripcion                                                                                                                                                           |
