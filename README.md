@@ -74,17 +74,14 @@ El endpoint de esta solicitud es:
 ```
 GET->/api/products/search/{numeroOrden}/{search?}
 ```
-Donde {numeroOrden} puede tomar 6 valores distintos segun el orden que se desee consultar.
 
-|          Name | Required |  Type   | Description                                                                                                                                                           |
+
+|          Nombre | Prioridad |  Tipo   | Descripcion                                                                                                                                                           |
 | -------------:|:--------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|     `0` | required | int  | The product for which to perform the action. <br/><br/> Supported values: `publish` or `analyze`.                                                                     |
-|     `1` | required | int  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
-|     `2` | required | int  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
-|     `3` | required | int  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
-|     `4` | required | int  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
-|     `5` | required | int  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |
+|     `numeroOrden` | requerido | int  | Determina el tipo de orden en que se retornaran los productos, siendo: <br/><br/>-0:Ordenar por categorias de manera ascendente <br/><br/>-1:Ordenar por categorias de manera descendente <br/><br/>-2:Ordenar por orden alfabetico de manera ascendente <br/><br/>-3:Ordenar por orden alfabetico de manera descendente <br/><br/>-4:Ordenar por precio de manera ascendente <br/><br/>-5:Ordenar por precio de manera descendente                                                                  |
+|     `search` | opcional | int  | The organization ID for which to perform the action. <br/><br/> Default is `null`. <br/><br/> If passed, we will check if the user is part of that organization before returning any information.                                                                     |                                                                  |
 
+Donde {numeroOrden} puede tomar 6 valores distintos segun el orden que se desee consultar.
 
 ## Autor ✒️
 
