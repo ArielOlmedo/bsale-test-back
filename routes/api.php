@@ -20,21 +20,21 @@ use App\Http\Controllers\CategoryController;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('products/search/0/categories/{search?}/{palabra?}',[ProductoController::class,'categories']);
-Route::get('products/search/1/categories/{search?}/{palabra?}',[ProductoController::class,'categories']);
-Route::get('products/search/2/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesNasc']);
-Route::get('products/search/3/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesNdesc']);
-Route::get('products/search/4/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesPasc']);
-Route::get('products/search/5/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesPdesc']);
+Route::get('products/search/0/categories/{search?}/{palabra?}',[ProductoController::class,'categories']);//buscar objeto en categoria ordenado por categoria
+//Route::get('products/search/1/categories/{search?}/{palabra?}',[ProductoController::class,'categories']);
+Route::get('products/search/2/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesNasc']);//buscar objeto en categoria ordenado por nombre alfabeticamente ascendente
+Route::get('products/search/3/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesNdesc']);//buscar objeto en categoria ordenado por nombre alfabeticamente descendente
+Route::get('products/search/4/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesPasc']);//buscar objeto en categoria ordenado por precio ascendentemente
+Route::get('products/search/5/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesPdesc']);//buscar objeto en categoria ordenado por precio descendentemente
 
-Route::get('products/search/0/{search?}',[ProductoController::class,'busquedaCatAsc']);
-Route::get('products/search/1/{search?}',[ProductoController::class,'busquedaCatDesc']);
-Route::get('products/search/2/{search?}',[ProductoController::class,'busquedaNameAsc']);
-Route::get('products/search/3/{search?}',[ProductoController::class,'busquedaNameDesc']);
-Route::get('products/search/4/{search?}',[ProductoController::class,'busquedaPriceAsc']);
-Route::get('products/search/5/{search?}',[ProductoController::class,'busquedaPriceDesc']);
+Route::get('products/search/0/{search?}',[ProductoController::class,'busquedaCatAsc']);//buscar objeto ordenado por categoria
+//Route::get('products/search/1/{search?}',[ProductoController::class,'busquedaCatDesc']);
+Route::get('products/search/2/{search?}',[ProductoController::class,'busquedaNameAsc']);//buscar objeto ordenado por nombre alfabeticamente ascendente
+Route::get('products/search/3/{search?}',[ProductoController::class,'busquedaNameDesc']);//buscar objeto ordenado por nombre alfabeticamente descendente
+Route::get('products/search/4/{search?}',[ProductoController::class,'busquedaPriceAsc']);//buscar objeto ordenado por precio ascendente
+Route::get('products/search/5/{search?}',[ProductoController::class,'busquedaPriceDesc']);//buscar objeto ordenado por precio descendente
 ;
 
-Route::resource('categories',CategoryController::class);
-Route::resource('products',ProductoController::class);
+Route::resource('categories',CategoryController::class);//obtener categorias
+Route::resource('products',ProductoController::class);//obtener productos
 
