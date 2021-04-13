@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('products/search/0/categories/{search?}/{palabra?}',[ProductoController::class,'categories']);//buscar objeto en categoria ordenado por categoria ascendentemente segun su tipo
-Route::get('products/search/1/categories/{search?}/{palabra?}',[ProductoController::class,'categories']);//buscar objeto en categoria ordenado por categoria descendentemente segun su tipo
+Route::get('products/search/1/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesDesc']);//buscar objeto en categoria ordenado por categoria descendentemente segun su tipo
 Route::get('products/search/2/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesNasc']);//buscar objeto en categoria ordenado por nombre alfabeticamente ascendente
 Route::get('products/search/3/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesNdesc']);//buscar objeto en categoria ordenado por nombre alfabeticamente descendente
 Route::get('products/search/4/categories/{search?}/{palabra?}',[ProductoController::class,'categoriesPasc']);//buscar objeto en categoria ordenado por precio ascendentemente

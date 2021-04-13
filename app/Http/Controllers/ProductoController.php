@@ -116,6 +116,31 @@ class ProductoController extends Controller
         }
     }
 
+    public function categoriesDesc($search=0,$palabra=null)
+    {
+        if($search>0){
+            if($palabra){
+                return Product::where('category','LIKE',"%$search%")
+                    ->where('name','LIKE',"%$palabra%")
+                    ->orderBy('category','desc')
+                    ->get();
+
+            }
+            return Product::WHERE('category','LIKE',"%$search%")
+                ->orderBy('category','desc')
+                ->get();
+        }
+        else{
+            if($palabra){
+                return Product::where('name','LIKE',"%$palabra%")
+                    ->orderBy('category','desc')
+                    ->get();
+
+            }
+            return Product::orderBy('category','desc')->get();
+        }
+    }
+
     public function categoriesNasc($search=0,$palabra=null)
     {
         if($search>0){
